@@ -70,7 +70,7 @@ DSDV is faster than AODV when the nodes know the network's routes beforehand.
 However, DSDV overloads the network (with *"Hello"* packets in order to update the routing tables) much more than AODV (which only sends *"RREQ"* and *"RREP"* packets when it's needed).
 
 ## Simulation analysis
-The following sections analyze how changes on the configuration impact the number of packets lost during simulations using AODV and DSDV protocols. 
+The following sections analyze how changes on the configuration impact the number of lost packets during simulations using AODV and DSDV protocols. 
 
 ### Analysis of AODV
 
@@ -82,7 +82,7 @@ The **base case** of the simulation has the following configuration parameters:
 
 If the simulation is executed during 240s sending 940 packets from a static node to another static node through a mobile node network, no packet is lost.
 
-**If the number os nodes is changed as following:***
+**If the number of nodes is changed as following:**
 
 - 6 mobile nodes: 452 lost packets. *940 packets were sent from the source node and only 488 were received from the destination. However, there is no packet lost on the packets sent from the destination node to the source node.*
 - 5 mobile nodes: 144 lost packets. *940 packets were sent from the source node and 807 received by the destination. On the other hand, the destination node sent 807 packets and the source node received 796.*
@@ -93,7 +93,7 @@ If the simulation is executed during 240s sending 940 packets from a static node
 With a determined communication range and mobility speed, it is important to ensure having the proper number of mobile nodes in order to have a minimum packet loss. 
 On this case the optimum number os mobile nodes is 7.
 
-**If the communication range is changed as following:***
+**If the communication range is changed as following:**
 
 - 370m: 377 lost packets. *940 were sent from source and 576 received by destination. 576 were sent from destination and 563 received by source.*
 - 360m: 396 lost packets. *940 were sent from source and 554 received by destination. 554 were sent from destination and 544 were received by source.*
@@ -106,7 +106,7 @@ With a determined number of mobile nodes and mobility speed, it is important to 
 On this case the optimum communication range is 400m.
 If it is decreased the number of lost packets will increase.
 
-**If the mobility speed is changed as following:***
+**If the mobility speed is changed as following:**
 
 - 1.25mps: 407 lost packets. *940 were sent from source and 594 received by destination. 594 were sent from destination and 533 received by source.*
 - 1.75mps: 466 lost packets. *940 were sent from source and 510 received by destination. 510 were sent from destination and 474 received by source.*
@@ -129,7 +129,7 @@ The **base case** of the simulation has the following configuration parameters:
 
 If the simulation is executed during 240s sending 940 packets from a static node to another static node through a mobile node network, there are 53 lost packets.  *940 packets were sent from the source node and only 913 were received from the destination. 913 sent from destination and 887 received by source.*
 
-**If the number os nodes is changed as following:***
+**If the number of nodes is changed as following:**
 
 - 5 mobile nodes: 67 lost packets. *940 packets were sent from the source node and 906 received by the destination. 906 sent from destination and 873 received by source.*
 - 3 mobile nodes: 72 lost packets. *940 packets sent from source and 895 received by destination. 895 sent from destination and 868 packets received by source.*
@@ -139,7 +139,7 @@ If the simulation is executed during 240s sending 940 packets from a static node
 **Impact of the number of mobile nodes:**
 The impact of the number of mobile nodes doesn't seem to be that important as it is on AODV. Nonetheless, the number of lost packets can be minimized with a determined number of mobile nodes, 6 on this simulation's case.
 
-**If the communication range is changed as following:***
+**If the communication range is changed as following:**
 
 - 600m: 62 lost packets. *940 were sent from source and 911 received by destination. 911 were sent from destination and 878 received by source.*
 - 550m: 70 lost packets. *940 were sent from source and 899 received by destination. 899 were sent from destination and 870 were received by source.*
@@ -151,7 +151,7 @@ The impact of the number of mobile nodes doesn't seem to be that important as it
 The impact of the communication range doesn't seem to be that important as it is on AODV. Even though, on DSDV is needed a higher communication range in order to don't have much packets lost.
 
 
-**If the mobility speed is changed as following:***
+**If the mobility speed is changed as following:**
 
 - 0.75mps: 70 lost packets. *940 were sent from source and 898 received by destination. 898 were sent from destination and 870 received by source.*
 - 1.5mps: 88 lost packets. *940 were sent from source and 909 received by destination. 909 were sent from destination and 852 received by source.*
